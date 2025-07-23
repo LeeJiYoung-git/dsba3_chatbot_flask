@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜센터 챗봇</title>
+</head>
+<body> 
+    <form method="POST" action="/callcenter">
+        <input type="text" name="message" placeholder="Enter your message here">
+        <input type="submit" value="Submit">
+    </form>
+  
+    <p>{{ text }}</p>
+    <p>학습 전 챗봇 >> </p>
+    <p>{{ before_answer }}</p>
+    <p>학습 후 챗봇 >></p>
+    <p>{{ after_answer }}</p>
+    {% if after_answer %}
+    <audio controls>
+        <source src="{{ audio_file_url }}" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}  
+</body>
+</html>

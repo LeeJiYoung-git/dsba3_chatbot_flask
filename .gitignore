@@ -1,0 +1,5 @@
+kogpt2_finetuning.pt
+kogpt2_pretrained.pkl
+kogpt2_tokenizer.pkl
+/model_serving
+/__pycache__
